@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Sportiv Kids Acro Dance Sibiu By Andreea Baștea</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* TOATE STILURILE PENTRU PAGINA INDEX SUNT AICI, PENTRU SIGURANȚĂ */
+        main {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .performanta-banner {
+            text-align: center; padding: 24px;
+            background: linear-gradient(135deg, #f2c6d0, #7bdff2);
+            color: #fff; margin-bottom: 40px; border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .performanta-banner h2 { color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+        .performanta-banner p { color: #fff; }
+        .performanta-banner button {
+            margin-top: 12px; padding: 10px 18px; border: none;
+            border-radius: 6px; background: #fff; color: #3b3d88;
+            font-weight: 700; cursor: pointer; transition: all .2s;
+        }
+        .performanta-banner button:hover { background: #6fdc7c; color: #fff; }
+
+        .section-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            border: 1.5px solid #B0C4DE;
+            border-radius: 12px;
+            padding: 2rem;
+            background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .layout-inversat {
+            flex-direction: row-reverse;
+        }
+        .section-card img {
+            width: 45%;
+            max-width: 400px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+        .section-card .content {
+            width: 50%;
+            padding: 0 20px;
+        }
+
+        .disciplines-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 1rem; }
+        .discipline { text-align: center; flex: 1 1 200px; max-width: 220px; }
+        .discipline img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0 6px 18px rgba(0,0,0,0.12); margin-bottom: 1rem;}
+        .discipline h3 { font-size: 1.2rem; font-weight: 700; color: #264653; }
+
+        .gallery-section {
+             display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem;
+             margin-bottom: 40px; flex-wrap: wrap; padding: 2rem;
+             background: linear-gradient(135deg, #F8F9FA, #E9ECEF); border: 1.5px solid #B0C4DE;
+             border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .gallery-text { flex: 1 1 45%; }
+        .gallery-images { flex: 1 1 50%; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .gallery-images img { width: 100%; border-radius: 12px; object-fit: cover; }
+
+        .btn {
+            display: inline-block; padding: 10px 25px; border-radius: 999px; text-decoration: none;
+            font-weight: 700; color: #fff; background: #2a9d8f; transition: all 0.2s ease;
+        }
+        .btn:hover { background: #264653; transform: translateY(-2px); }
+
+        @media (max-width: 820px) {
+            main { margin: 20px auto; }
+            .section-card, .layout-inversat, .gallery-section { flex-direction: column !important; }
+            .section-card img { width: 100%; max-width: 400px; margin: 0 auto 20px auto; }
+            .section-card .content { width: 100%; text-align: center; padding: 0; }
+            .gallery-text, .gallery-images {flex: 1 1 100%; width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-banner">
+            <img src="images/header.jpg" alt="Club Sportiv Kids Acro Dance Sibiu">
+        </div>
+        <div class="meniu-img">
+            <img src="images/meniu.jpg" alt="Meniu Club" class="meniu-bg">
+            <nav class="linkuri">
+                <a href="index.html" class="active">Acasă</a>
+                <a href="despre-noi.html">Despre noi</a>
+                <a href="inscrieri.html">Înscrieri</a>
+                <a href="grupele.html">Grupe</a>
+                <a href="premii.html">Premii</a>
+                <a href="evenimente.html">Evenimente</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="sponsorizare.html">Sponsorizare</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <select id="meniu-mobil">
+                <option value="">Navigare...</option>
+                <option value="index.html">Acasă</option>
+                <option value="despre-noi.html">Despre noi</option>
+                <option value="inscrieri.html">Înscrieri</option>
+                <option value="grupele.html">Grupe</option>
+                <option value="premii.html">Premii</option>
+                <option value="evenimente.html">Evenimente</option>
+                <option value="galerie.html">Galerie</option>
+                <option value="sponsorizare.html">Sponsorizare</option>
+                <option value="contact.html">Contact</option>
+                <option value="blog.html">Blog</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section class="performanta-banner" data-aos="zoom-in">
+            <h2>🏆 Grupele de performanță sunt calificate</h2>
+            <p>la <strong>Campionatul Mondial de AcroDance – Italia, noiembrie 2025</strong></p>
+            <p><strong>Avem nevoie de sprijinul tău financiar pentru a participa.</strong></p>
+            <button onclick="window.location.href='sponsorizare.html'">Mergi la pagina de sponsorizare & Contactează-ne</button>
+        </section>
+
+        <section class="section-card" data-aos="fade-up">
+            <img src="images/copii.jpg" alt="Acasă">
+            <div class="content">
+                <h1>Performanță. Disciplină. Pasiune.</h1>
+                <p><strong>Suntem singurul club de Acro Dance și Gimnastică din Sibiu și una dintre cele mai performante echipe la nivel național și internațional, dedicându-ne formării unor sportivi talentați, disciplinați și pasionați.</strong></p>
+                <h2>Bun venit la Clubul Sportiv Kids Acro Dance Sibiu By Andreea Baștea!</h2>
+                <p>Fondat în 2022 de <strong>Andreea Mihaela Baștea</strong>, fostă gimnastă cu peste 20 de ani de experiență în formarea sportivilor, clubul nostru le oferă copiilor începând cu 4 ani, oportunitatea de a se dezvolta prin mișcare, disciplină și artă.</p>
+                <p>Împreună cu o echipă de instructori dedicați, foști gimnaști de performanță, oferim cursuri de acro dance, gimnastică și balet, formând sportivi talentați și pasionați.</p>
+                <a href="despre-noi.html" class="btn">Citește toată povestea</a>
+            </div>
+        </section>
+
+        <section class="section-card layout-inversat" data-aos="fade-up">
+            <div class="content" style="width:100%; text-align:center;">
+                <h2>Disciplinele noastre</h2>
+                <p style="max-width:700px; margin: 0 auto 2rem;">
+                    La Clubul Sportiv Kids Acro Dance Sibiu By Andreea Baștea, copiii descoperă bucuria mișcării prin balet, acro dance și gimnastică artistică, discipline care dezvoltă armonios forța, flexibilitatea, creativitatea și disciplina.</p>
+                <p>Fiecare curs este conceput pentru a stimula talentul, pasiunea și încrederea în sine, într-un mediu profesionist și motivant, alături de instructori cu experiență de performanță.</p>
+                <div class="disciplines-container">
+                    <div class="discipline" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/acro.jpg" alt="Acro Dance">
+                        <h3>Acro Dance</h3>
+                        <p>Combină grația dansului cu elemente acrobatice spectaculoase.</p>
+                    </div>
+                    <div class="discipline" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="images/gimnastica.jpg" alt="Gimnastică">
+                        <h3>Gimnastică</h3>
+                        <p>Îmbină forța, echilibrul și tehnica, dezvoltând coordonarea și disciplina fiecărui copil.</p>
+                    </div>
+                    <div class="discipline" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="images/balet.jpg" alt="Balet">
+                        <h3>Balet</h3>
+                        <p>Artă și grație în fiecare pas, care dezvoltă postura, expresivitatea și eleganța copiilor.</p>
+                    </div>
+                </div>
+                <div style="margin-top:2rem;">
+                    <a href="grupele.html" class="btn">Vezi toate grupele</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card" data-aos="fade-up">
+            <img src="images/inscrieri.jpg" alt="Înscrieri">
+            <div class="content">
+                <h2>Alătură-te Echipei Noastre!</h2>
+                <p>Oferă-i copilului tău șansa de a se dezvolta armonios și de a atinge performanța într-un mediu profesionist și dedicat.</p>
+                <a href="inscrieri.html" class="btn">Înscrie-te acum</a>
+            </div>
+        </section>
+
+        <section class="section-card layout-inversat" data-aos="fade-up">
+            <img src="images/premii.jpg" alt="Premii">
+            <div class="content">
+                <h2>Premii</h2>
+                <p>Clubul nostru se mândrește cu medalii, trofee și rezultate remarcabile la competiții naționale și internaționale.</p>
+                <a href="premii.html" class="btn">Vezi premiile</a>
+            </div>
+        </section>
+
+        <section class="section-card" data-aos="fade-up">
+            <img src="images/evenimente.jpg" alt="Evenimente">
+            <div class="content">
+                <h2>Servicii Speciale</h2>
+                <p><strong>Pe lângă cursurile pentru copii, creativitatea noastră nu are limite. </strong></p>
+                <p>Profesorul și coregraful, <strong>Andreea Baștea</strong>, cu o experiență de peste 15 ani în acest domeniu, <strong>oferă cursuri private pentru dansul mirilor</strong>.</p>
+                <p><strong>În Plus</strong>, susținem spectacole de dans acrobatic la diverse evenimente private, culturale, corporative, sau sportive.</p>
+                <a href="contact.html" class="btn">Cere o ofertă</a>
+            </div>
+        </section>
+
+        <section class="gallery-section" data-aos="fade-up">
+            <div class="gallery-text">
+                <h2>Momente de neuitat</h2>
+                <p>Pătrunde în lumea Kids Acro Dance Sibiu și descoperă magia fiecărui pas!</p>
+                <p>Fiecare fotografie surprinde energie, pasiune și talent – de la primii pași la spectacole și competiții internaționale.</p>
+                <a href="galerie.html" class="btn">Vezi Galeria Completă</a>
+            </div>
+            <div class="gallery-images">
+                <img src="images/national2.jpg" alt="Imagine din galerie 1">
+                <img src="images/national7.jpg" alt="Imagine din galerie 2">
+                <img src="images/national4.jpg" alt="Imagine din galerie 3">
+                <img src="images/national10.jpg" alt="Imagine din galerie 4">
+            </div>
+        </section>
+
+        <section class="section-card layout-inversat" data-aos="fade-up">
+            <img src="images/sponsorizare.jpg" alt="Sponsorizare">
+            <div class="content">
+                <h3>Susține Performanța</h3>
+                <p><strong>Fiecare vis are nevoie de susținere.</strong></p> 
+                <p>Deveniți partenerul nostru și investiți în viitorul tinerilor sportivi.</p>
+                <a href="sponsorizare.html" class="btn">Devino Sponsor</a>
+            </div>
+        </section>
+
+        <section class="section-card" data-aos="fade-up">
+            <div class="content">
+                <h2>Contactează-ne</h2>
+                <p>Aveți întrebări sau doriți să programați o vizită? Echipa noastră vă stă la dispoziție.</p>
+                <a href="contact.html" class="btn">Contactează-ne</a>
+            </div>
+        </section>
+
+        <section class="section-card layout-inversat" data-aos="fade-up">
+            <img src="images/blog.jpg" alt="Blog">
+            <div class="content">
+                <h3>Noutăți din Club</h3>
+                <p>Citiți cele mai recente articole de pe blogul nostru: povești de la competiții, interviuri cu sportivii și sfaturi de la antrenori.</p>
+                <a href="blog.html" class="btn">Citește Blogul</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h4>Club Sportiv Kids Acro Dance Sibiu By Andreea Baștea</h4>
+            <p>📍 Str. Alba Iulia nr. 6, Sibiu | 📞 0755 119 075 – Andreea Mihaela Baștea</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Basteaandreeakidsacrodance" target="_blank" class="social-btn">📷 Facebook</a>
+            </div>
+            <p style="margin-top:0.5rem; font-size:0.9rem;"><strong>Site creat de DyaARTG</strong></p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const meniuMobil = document.getElementById('meniu-mobil');
+        if (meniuMobil) {
+            meniuMobil.addEventListener('change', (event) => {
+                const valoareSelectata = event.target.value;
+                if (valoareSelectata) {
+                    window.location.href = valoareSelectata;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

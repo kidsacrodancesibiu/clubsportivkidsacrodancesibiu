@@ -1,0 +1,90 @@
+/* ==== STIL PENTRU PAGINA PREMII ==== */
+
+/* Titlul și descrierea paginii */
+.titlu-principal-pagina { text-align: center; font-size: 3rem; font-weight: 900; color: var(--blue-dark); margin-bottom: 1.5rem; }
+.descriere-pagina { text-align: center; max-width: 800px; margin: 0 auto 4rem auto; font-size: 1.1rem; line-height: 1.7; color: var(--text-light); }
+
+/* Stil pentru fiecare secțiune de premii (Naționale, Internaționale) */
+.premii-categorie {
+    margin-bottom: 2rem;
+}
+.premii-categorie h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2.5rem;
+}
+
+/* Grila care ține cardurile cu premii */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Stilul pentru fiecare card de premiu */
+.award-card {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+.award-card:hover {
+    transform: translateY(-5px);
+}
+
+.award-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;      /* <-- MODIFICAREA CHEIE */
+    background-color: white;  /* Adaugă un fundal alb în spatele pozei */
+    display: block;
+    cursor: pointer;
+}
+.award-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+.award-content h3 {
+    font-size: 1.4rem;
+    color: var(--blue-dark);
+    margin-bottom: 1rem;
+}
+.award-content p, .award-content ul {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.award-content ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+.award-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Galerie mică la final */
+.galerie-premii {
+    margin-top: 2rem;
+}
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.galerie-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.galerie-container img:hover {
+    transform: scale(1.05);
+}

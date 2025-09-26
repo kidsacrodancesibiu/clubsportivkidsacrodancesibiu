@@ -1,0 +1,79 @@
+/* ==== STIL PENTRU PAGINA DE CONTACT ==== */
+
+/* Containerul principal al paginii */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start; /* Aliniază elementele la început */
+}
+
+/* Partea din stânga - Informații de contact */
+.contact-details {
+    flex: 1 1 400px; /* Ocupă spațiu, dar permite împărțirea pe mobil */
+}
+
+.contact-details h1 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--blue-dark);
+    margin-bottom: 1.5rem;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+    color: var(--verde-club);
+    margin-right: 1rem;
+    width: 30px; /* Lățime fixă pentru aliniere */
+}
+
+.info-item a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: var(--verde-club);
+}
+
+/* Partea din dreapta - Harta */
+.map-container {
+    flex: 1 1 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    min-height: 450px;
+}
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: 0;
+    display: block; /* Elimină spațiul de sub hartă */
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    .contact-details h1 {
+        text-align: center;
+    }
+}

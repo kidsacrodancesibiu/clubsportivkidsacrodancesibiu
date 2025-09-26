@@ -1,0 +1,125 @@
+/* ==== STIL COMPLET PENTRU PAGINA GALERIE ==== */
+
+/* Containerul principal și titlurile de început */
+.galerie-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 20px;
+}
+.titlu-principal-pagina {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--blue-dark);
+    margin-bottom: 1.5rem;
+}
+.descriere-pagina {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Butoanele de filtrare orizontale */
+.galerie-filtre {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.filtru-btn {
+    background: transparent;
+    border: 2px solid var(--silver-border);
+    color: var(--text-light);
+    padding: 0.8rem 1.5rem;
+    margin: 0.25rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.filtru-btn:hover {
+    background-color: var(--silver-dark);
+    color: var(--text-dark);
+}
+.filtru-btn.activ {
+    background-color: var(--verde-club);
+    color: #fff;
+    border-color: var(--verde-club);
+}
+
+/* Containerul galeriei */
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Stilul pentru fiecare item (imagine sau video) */
+.galerie-item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    background: #fff; /* Fundal alb pentru carduri */
+    overflow: hidden;
+    display: none; /* Ascundem itemii by default */
+    flex-direction: column; /* Asigură că textul stă sub imagine */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.galerie-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+/* Clasa 'show' pe care o adaugă JavaScript-ul pentru a afișa itemii */
+.galerie-item.show {
+    display: flex; /* Schimbat în flex pentru aliniere */
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.galerie-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Stil pentru descrierea vizibilă permanent a video-urilor */
+.galerie-item-descriere {
+    padding: 1rem 1.2rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-align: center;
+    font-weight: 600;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+/* Iconița Play peste imaginea video */
+.play-icon {
+    position: absolute;
+    top: 110px; /* Jumătatea înălțimii imaginii (220px / 2) */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+.galerie-item:hover .play-icon {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Lightbox (rămâne la fel) */
+.lightbox { display: none; position: fixed; z-index: 9999; inset: 0; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; padding: 20px; }
+.lightbox-content { max-width: 90%; max-height: 90%; border-radius: 8px; }
+.lightbox .close { position: absolute; top: 20px; right: 35px; font-size: 40px; color: #fff; cursor: pointer; }

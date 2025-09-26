@@ -1,0 +1,102 @@
+/* ==== STIL PENTRU PAGINA GRUPE ==== */
+
+/* Secțiunea introductivă */
+.intro-grupe {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+}
+.intro-grupe h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--blue-dark);
+    margin-bottom: 1rem;
+}
+.intro-grupe p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* Stil pentru fiecare container de disciplină (Acro, Gimnastică, Balet) */
+.disciplina-section {
+    margin-bottom: 4rem;
+}
+.disciplina-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--silver-border);
+}
+
+/* Grila care ține cardurile pentru grupe */
+.group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Cardul pentru fiecare grupă */
+.group-card {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--verde-club); /* Accent de culoare */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.group-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+/* Culoare de accent diferită pentru fiecare disciplină */
+.acro-dance .group-card { border-top-color: var(--verde-club); }
+.gimnastica .group-card { border-top-color: var(--blue-dark); }
+.balet .group-card { border-top-color: var(--pink-dust); }
+
+.group-card h3 {
+    font-size: 1.6rem;
+    color: var(--blue-dark);
+    margin-bottom: 1rem;
+}
+.group-card p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Secțiunea specială pentru grupele de performanță */
+.performanta-section {
+    text-align: center;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc); /* Gradient mov-albastru */
+    border-radius: 12px;
+}
+.performanta-section h2 {
+    color: #264653;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.performanta-section p {
+    color: #264653;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+.performanta-imagini {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+.performanta-imagini img {
+    width: 150%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}

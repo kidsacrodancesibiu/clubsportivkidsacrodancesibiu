@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premii - Kids Acro Dance Sibiu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="premii.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-banner">
+            <img src="images/header.jpg" alt="Club Sportiv Kids Acro Dance Sibiu">
+        </div>
+        <div class="meniu-img">
+            <img src="images/meniu.jpg" alt="Meniu Club" class="meniu-bg">
+            <nav class="linkuri">
+                <a href="index.html" class="active">Acasă</a>
+                <a href="despre-noi.html">Despre noi</a>
+                <a href="inscrieri.html">Înscrieri</a>
+                <a href="grupele.html">Grupe</a>
+                <a href="premii.html">Premii</a>
+                <a href="evenimente.html">Evenimente</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="sponsorizare.html">Sponsorizare</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+            </nav>
+            <select id="meniu-mobil">
+                <option value="">Navigare...</option>
+                <option value="index.html">Acasă</option>
+                <option value="despre-noi.html">Despre noi</option>
+                <option value="inscrieri.html">Înscrieri</option>
+                <option value="grupele.html">Grupe</option>
+                <option value="premii.html">Premii</option>
+                <option value="evenimente.html">Evenimente</option>
+                <option value="galerie.html">Galerie</option>
+                <option value="sponsorizare.html">Sponsorizare</option>
+                <option value="contact.html">Contact</option>
+                <option value="blog.html">Blog</option>
+            </select>
+        </div>
+    </header>
+    <main class="container-principal">
+
+        <h1 class="titlu-principal-pagina" data-aos="fade-up">Palmaresul Clubului</h1>
+        <p class="descriere-pagina" data-aos="fade-up">
+            De-a lungul anilor, sportivii clubului nostru au obținut numeroase distincții la competiții naționale și internaționale, demonstrând talent, muncă și pasiune. Fiecare premiu reflectă dedicarea antrenorilor și efortul copiilor care își depășesc limitele zi de zi.
+        </p>
+
+        <div class="card-standard" data-aos="fade-up">
+            <section class="premii-categorie">
+                <h2>Premii Internaționale</h2>
+                <div class="awards-grid">
+                    <div class="award-card" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="images/slovenia.jpg" alt="Premiu Slovenia" onclick="openLightbox(this)">
+                        <div class="award-content">
+                            <h3>Campionat European – Slovenia 2024</h3>
+                            <p><strong>Campioane Mondiale, categoria Producție All Age</strong></p>
+                        </div>
+                    </div>
+                    <div class="award-card" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="images/polonia.jpg" alt="Premiu Polonia" onclick="openLightbox(this)">
+                        <div class="award-content">
+                            <h3>Campionat Mondial – Polonia</h3>
+                            <ul>
+                                <li><strong>Locul 4</strong> – Angel (formație copii)</li>
+                                <li><strong>Locul 4</strong> – The Phantom of the Opera (formație juniori)</li>
+                                <li><strong>Locul 6</strong> – Ad Martem (formație copii)</li>
+                                <li><strong>Locul 6</strong> – Mama (grup copii)</li>
+                                <li><strong>Locul 7</strong> – What About Peace (grup copii)</li>
+                                <li><strong>Locul 8</strong> – Grandioso (grup copii)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="award-card" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="images/italia.jpg" alt="Calificare Italia" onclick="openLightbox(this)">
+                        <div class="award-content">
+                            <h3>Calificare – Italia 2025</h3>
+                            <p>Grupele de performanță Starlight & Trilogym sunt calificate pentru următorul Campionat Mondial.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="card-standard" data-aos="fade-up">
+            <section class="premii-categorie">
+                <h2>Premii Naționale</h2>
+                <div class="awards-grid">
+                    <div class="award-card" data-aos="zoom-in">
+                        <img src="images/nationale.jpg" alt="Premii Naționale" onclick="openLightbox(this)">
+                        <div class="award-content">
+                            <h3>Peste 400 de Trofee</h3>
+                            <p>Atât grupele hobby, cât și cele de performanță, se clasează constant pe podium la competițiile naționale.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <div class="card-standard" data-aos="fade-up">
+            <section class="galerie-premii">
+                <h2>Galerie din Competiții</h2>
+                <div class="galerie-container">
+                    <img src="images/international5.jpg" alt="Competiție" onclick="openLightbox(this)">
+                    <img src="images/national10.jpg" alt="Competiție" onclick="openLightbox(this)">
+                    <img src="images/national19.jpg" alt="Competiție" onclick="openLightbox(this)">
+                    <img src="images/national1.jpg" alt="Competiție" onclick="openLightbox(this)">
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div id="lightbox-content-container"></div>
+    </div>
+
+ <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h4>Club Sportiv Kids Acro Dance Sibiu By Andreea Baștea</h4>
+            <p>📍 Str. Alba Iulia nr. 6, Sibiu | 📞 0755 119 075 – Andreea Mihaela Baștea</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Basteaandreeakidsacrodance" target="_blank" class="social-btn">📷 Facebook</a>
+            </div>
+            <p style="margin-top:0.5rem; font-size:0.9rem;"><strong>Site creat de DyaARTG</strong></p>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+    </script>
+
+</body>
+</html>

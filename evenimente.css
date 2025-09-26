@@ -1,0 +1,105 @@
+/* ==== STIL PENTRU PAGINA EVENIMENTE ==== */
+
+/* Titlurile și descrierile din carduri */
+.titlu-sectiune {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--blue-dark);
+    margin-bottom: 1rem;
+}
+.descriere-pagina {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* Secțiunea de conținut (Imagine + Text) */
+.content-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.content-item:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+.content-image {
+    flex: 1 1 40%;
+    min-width: 300px;
+}
+.content-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.content-text {
+    flex: 1 1 55%;
+}
+.content-text h3 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+/* Slider-ul Foto - CORECTAT */
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background-color: #f0f0f0; /* Fundal de încărcare */
+}
+#slider-image {
+    width: 100%;
+    height: 450px; /* Înălțime fixă pentru slider */
+    object-fit: cover; /* Umple spațiul fără a deforma imaginea */
+    display: block;
+}
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; padding: 1rem; font-size: 1.5rem; transition: background 0.3s; z-index: 10; }
+.slider-btn:hover { background: rgba(0,0,0,0.8); }
+.prev-btn { left: 10px; border-radius: 5px; }
+.next-btn { right: 10px; border-radius: 5px; }
+.slider-counter { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; }
+
+/* Galeria Video - CORECTATĂ */
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.galerie-item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.galerie-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Afișează imaginea întreagă */
+    background-color: white; /* Adaugă fundal alb pentru spațiile goale */
+    display: block;
+    transition: transform 0.3s;
+}
+.galerie-item:hover img {
+    transform: scale(1.05);
+}
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 15px rgba(0,0,0,0.8);
+    pointer-events: none;
+}

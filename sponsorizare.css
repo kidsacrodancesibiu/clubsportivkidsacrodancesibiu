@@ -1,0 +1,168 @@
+/* ==== STILURI PENTRU PAGINA DE SPONSORIZARE ==== */
+
+/* Secțiunea Call to Action (CTA) */
+.cta-hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--albastru-club), var(--blue-dark)); /* De la albastru deschis la albastru închis */
+    color:#264653; /* Text alb pentru lizibilitate */
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.cta-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.cta-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    line-height: 1.6;
+}
+
+.cta-hero .button {
+    display: inline-block;
+    background-color: var(--verde-club); /* Butonul verde al clubului */
+    color: #264653;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-hero .button:hover {
+    background-color: #388e3c; /* Verde mai închis la hover */
+    transform: translateY(-2px);
+}
+
+/* Stil pentru secțiunea introductivă cu imagine */
+.intro-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.intro-text {
+    flex: 1;
+}
+.intro-text p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+.intro-image {
+    flex: 0 0 40%;
+}
+.intro-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Stil general pentru titlurile secțiunilor din carduri */
+.sponsor-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--blue-dark);
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+/* Liste de informații */
+.info-list {
+    list-style: none; /* Elimină bulinele default */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+}
+.info-list li {
+    background-color: #E6F3FF; /* Un albastru foarte deschis */
+    border-left: 5px solid var(--albastru-club); /* O linie albastră la stânga */
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.info-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Grila cu logo-uri sponsori */
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+}
+.sponsor-item {
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Centrează imaginea */
+    justify-content: center;
+    align-items: center;
+    max-width: 200px; /* Lățime maximă pentru item */
+    height: 120px; /* Înălțime fixă pentru consistență */
+}
+.sponsor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.sponsor-item img {
+    max-width: 100%;
+    max-height: 80%; /* Asigură că logo-urile se încadrează */
+    display: block;
+    object-fit: contain; /* Ajustează imaginea fără a o distorsiona */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .cta-hero h1 {
+        font-size: 2.5rem;
+    }
+    .cta-hero p {
+        font-size: 1.1rem;
+    }
+    .sponsor-section h2 {
+        font-size: 2rem;
+    }
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-image {
+        flex: 0 0 100%; /* Imaginea ia lățimea completă pe mobil */
+        margin-top: 2rem;
+    }
+    .info-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-hero h1 {
+        font-size: 2rem;
+    }
+    .cta-hero p {
+        font-size: 1rem;
+    }
+    .cta-hero .button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    .sponsor-section h2 {
+        font-size: 1.8rem;
+    }
+}

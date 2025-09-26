@@ -1,0 +1,87 @@
+/* ==== STIL NOU PENTRU PAGINA DESPRE NOI ==== */
+
+/* Secțiunea "Povestea Noastră" (rămâne la fel) */
+.about-section { display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem; }
+.about-image { flex: 0 0 40%; }
+.about-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.about-content { flex: 1; }
+.about-content h1 { font-size: 1.8rem; font-weight: 900; color: var(--blue-dark); margin-bottom: 1rem; line-height: 1.2; }
+.about-content h2 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: 1.5rem; font-weight: 700; }
+.about-content p { font-size: 1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 1.5rem; }
+
+/* Secțiunea "Echipa Noastră" */
+.team-section h2 { text-align: center; font-size: 2.5rem; font-weight: 900; color: var(--blue-dark); margin-bottom: 3rem; }
+
+/* STIL NOU: Cardul special pentru Fondator */
+.featured-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    margin-bottom: 3rem; /* Spațiu până la instructori */
+}
+.featured-card .team-card-image {
+    flex: 0 0 200px; /* Dimensiune fixă pentru imagine */
+}
+.featured-card .team-card-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+.featured-card .team-card-content {
+    flex: 1;
+    text-align: left;
+}
+.featured-card h3 { font-size: 1.8rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+.featured-card .role { font-size: 1rem; font-weight: 700; color: var(--verde-club); margin-bottom: 1rem; text-transform: uppercase; }
+.featured-card p { font-size: 1rem; color: var(--text-light); margin-bottom: 0.5rem; }
+
+/* STIL NOU: Grila pentru restul instructorilor */
+.instructors-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+.team-grid {
+    display: grid;
+    /* 3 coloane pe desktop */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.team-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.team-card:hover {
+    transform: translateY(-5px);
+}
+.team-card img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem auto;
+}
+.team-card h3 { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+
+/* CTA la final (rămâne la fel) */
+.cta-card { text-align: center; margin-top: 4rem; }
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-section, .featured-card { flex-direction: column; text-align: center; }
+    .featured-card .team-card-content { text-align: center; }
+    .team-grid { grid-template-columns: 1fr; } /* O singură coloană pe tablete/mobil */
+}

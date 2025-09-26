@@ -1,0 +1,105 @@
+/* ==== STIL PENTRU PAGINA DE BLOG (CORECTAT) ==== */
+
+.titlu-principal-pagina { 
+    text-align: center; 
+    font-size: 3rem; 
+    font-weight: 900; 
+    color: var(--blue-dark); 
+    margin-bottom: 1.5rem; 
+}
+
+.descriere-pagina { 
+    text-align: center; 
+    max-width: 800px; 
+    margin: 0 auto 4rem auto; 
+    font-size: 1.1rem; 
+    line-height: 1.7; 
+    color: #555; 
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.post-card {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.post-image {
+    background-color: #f8f8f8;
+}
+
+.post-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain; /* <-- Aici este modificarea cheie */
+    display: block;
+}
+
+.post-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.post-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--blue-dark);
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+    min-height: 50px;
+}
+
+.post-title a { 
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease; 
+}
+
+.post-title a:hover { 
+    color: var(--verde-club); 
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+.read-more-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    background-color: #3b3d88;
+    color: #fff; /* Am adăugat culoarea albă pentru text, care lipsea */
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: var(--albastru-club);
+}

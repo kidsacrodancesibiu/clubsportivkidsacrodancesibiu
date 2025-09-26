@@ -1,0 +1,83 @@
+/* ==== STIL FINAL PENTRU PAGINA DE ARTICOL INDIVIDUAL ==== */
+
+.articol-container {
+    background: linear-gradient(135deg, #F8F9FA, #E9ECEF); /* degradeu argintiu subtil */
+    border-radius: 12px;
+    padding: 2rem 3rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+}
+
+.articol-header {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Containerul imaginii - simplificat */
+.articol-imagine-header {
+    margin-bottom: 2rem;
+    line-height: 0; /* Elimină orice spațiu gol sub imagine */
+}
+
+/* Imaginea principală - CORECTATĂ PENTRU A NU SE TĂIA */
+.articol-imagine-header img {
+    width: 100%;
+    height: auto; /* Înălțimea se va calcula automat pentru a păstra proporțiile */
+    display: block; /* Asigură o comportare corectă a imaginii */
+    border-radius: 12px; /* Păstrăm colțurile rotunjite */
+}
+
+.articol-titlu {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: var(--blue-dark);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.articol-meta {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.articol-continut {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.articol-continut p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.articol-continut h3 {
+    font-size: 1.6rem;
+    color: var(--albastru-club);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+.articol-continut ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+.articol-continut li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+.articol-continut a {
+    color: var(--verde-club);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.articol-continut a:hover {
+    color: var(--blue-dark);
+}
+@media (max-width: 768px) {
+    .articol-container { padding: 1.5rem; }
+    .articol-titlu { font-size: 2rem; }
+    .articol-continut p, .articol-continut li { font-size: 1rem; }
+}
